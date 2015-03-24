@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Paperclip Demo</title>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <%= stylesheet_link_tag 'application', :media => 'all' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <div class="header-wrap">
+      <h1><%= link_to 'Paperclip Demo', root_path %></h1>
+      <%= link_to 'Fork me on github', 'https://github.com/thoughtbot/paperclip_demo', target: 'blank', class: 'fork_me' %>
+    </div>
+  </header>
+
+  <div id="main-wrap">
+    <%= yield %>
+  </div>
+
+  <footer>
+    <p id="copyright">© 2012 thoughtbot, inc. The <em>design of a robot</em> and <em>thoughtbot</em> are registered trademarks of <%= link_to 'thoughtbot, inc', 'http://thoughtbot.com', target: 'blank' %>.</p>
+  </footer>
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
